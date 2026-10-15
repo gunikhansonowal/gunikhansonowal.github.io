@@ -55,12 +55,6 @@
             font-size: 0.95em;
         }
 
-        .contact-info span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
         .contact-info a {
             color: #1a5276;
             text-decoration: none;
@@ -103,18 +97,55 @@
             margin-bottom: 14px;
         }
 
-        .education-item, .position-item {
+        .education-item {
             margin-bottom: 16px;
             padding-left: 15px;
             border-left: 3px solid #d4e6f1;
         }
 
         .pub-item {
-            margin-bottom: 14px;
-            padding-left: 20px;
-            text-indent: -20px;
+            margin-bottom: 16px;
+            padding: 12px 15px;
+            background-color: #f8f9fa;
+            border-left: 4px solid #1a5276;
+            border-radius: 4px;
             font-size: 0.95em;
             text-align: justify;
+        }
+
+        .pub-item a {
+            color: #1a5276;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .pub-item a:hover {
+            text-decoration: underline;
+            color: #0e3a56;
+        }
+
+        .pub-links {
+            margin-top: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .pub-links a {
+            display: inline-block;
+            padding: 4px 12px;
+            background-color: #eaf2f8;
+            color: #1a5276;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.82em;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .pub-links a:hover {
+            background-color: #1a5276;
+            color: #fff;
         }
 
         ul {
@@ -155,18 +186,13 @@
             transform: translateY(-2px);
         }
 
-        .highlight {
-            font-weight: 600;
-            color: #1a5276;
-        }
-
         .badge {
             display: inline-block;
             background-color: #eaf2f8;
             color: #1a5276;
             padding: 3px 10px;
             border-radius: 12px;
-            font-size: 0.8em;
+            font-size: 0.78em;
             font-weight: 600;
             margin-left: 5px;
         }
@@ -225,26 +251,11 @@
         }
 
         @media (max-width: 700px) {
-            header h1 {
-                font-size: 1.7em;
-            }
-
-            .container {
-                padding: 25px 18px;
-            }
-
-            .contact-info {
-                flex-direction: column;
-                gap: 8px;
-            }
-
-            .two-column {
-                grid-template-columns: 1fr;
-            }
-
-            .stat-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            header h1 { font-size: 1.7em; }
+            .container { padding: 25px 18px; }
+            .contact-info { flex-direction: column; gap: 8px; }
+            .two-column { grid-template-columns: 1fr; }
+            .stat-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
@@ -252,7 +263,7 @@
 
 <div class="container">
 
-    <!-- ==================== HEADER ==================== -->
+    <!-- HEADER -->
     <header>
         <h1>Dr. Gunikhan Sonowal</h1>
         <p class="subtitle">Cybersecurity Researcher | Digital Forensics | Author | Educator</p>
@@ -264,7 +275,7 @@
         </div>
     </header>
 
-    <!-- ==================== ABOUT ==================== -->
+    <!-- ABOUT -->
     <section>
         <h2>About</h2>
         <div class="bio">
@@ -272,39 +283,25 @@
                 Dr. Gunikhan Sonowal is a cybersecurity researcher and academic specializing in digital forensics, machine learning for threat detection, anti-phishing technologies, and accessible security design. He is currently a <strong>Postdoctoral Fellow in Digital Forensics</strong> at the National Forensic Sciences University, Gandhinagar, under the ISEA Phase-III programme funded by the Ministry of Electronics and Information Technology (MeitY), Government of India.
             </p>
             <p>
-                He holds a Ph.D. in Computer Science &amp; Engineering from Pondicherry University and a Master's degree from the University of Hyderabad. With over six years of teaching experience as an Assistant Professor at Assam down town University, KLEF, and Sanskriti School of Engineering, JNTUA, he has authored 15+ research papers, 4 books, and holds 1 patent. His current research focuses on digital forensics, forensic data deduplication, and AI-driven threat detection.
+                He holds a Ph.D. in Computer Science &amp; Engineering from Pondicherry University and a Master's degree from the University of Hyderabad. With over six years of teaching experience as an Assistant Professor at Assam down town University, KLEF, and Sanskriti School of Engineering, JNTUA, he has authored 15+ research papers, 4 books, and holds 1 patent.
             </p>
         </div>
 
-        <!-- STATS -->
         <div class="stat-grid">
-            <div class="stat-card">
-                <span class="number">15+</span>
-                <span class="label">Journal Articles</span>
-            </div>
-            <div class="stat-card">
-                <span class="number">4</span>
-                <span class="label">Books</span>
-            </div>
-            <div class="stat-card">
-                <span class="number">6+</span>
-                <span class="label">Years Teaching</span>
-            </div>
-            <div class="stat-card">
-                <span class="number">1</span>
-                <span class="label">Patent</span>
-            </div>
+            <div class="stat-card"><span class="number">15+</span><span class="label">Journal Articles</span></div>
+            <div class="stat-card"><span class="number">4</span><span class="label">Books</span></div>
+            <div class="stat-card"><span class="number">6+</span><span class="label">Years Teaching</span></div>
+            <div class="stat-card"><span class="number">1</span><span class="label">Patent</span></div>
         </div>
     </section>
 
-    <!-- ==================== EDUCATION ==================== -->
+    <!-- EDUCATION -->
     <section>
         <h2>Education</h2>
         <div class="education-item">
             <strong>Ph.D. in Computer Science &amp; Engineering</strong><br>
             Pondicherry University, India (2015–2019)<br>
-            <em>Thesis:</em> Machine Learning based Accessible Anti-Phishing Model with Heterogeneous Features and Multifarious Filters<br>
-            <em>Advisor:</em> Dr. K. S. Kuppusamy
+            <em>Thesis:</em> Machine Learning based Accessible Anti-Phishing Model with Heterogeneous Features and Multifarious Filters
         </div>
         <div class="education-item">
             <strong>Master of Computer Applications (MCA)</strong><br>
@@ -316,7 +313,7 @@
         </div>
     </section>
 
-    <!-- ==================== ACADEMIC POSITIONS ==================== -->
+    <!-- ACADEMIC POSITIONS -->
     <section>
         <h2>Academic Positions</h2>
         <ul>
@@ -327,7 +324,7 @@
         </ul>
     </section>
 
-    <!-- ==================== RESEARCH INTERESTS ==================== -->
+    <!-- RESEARCH INTERESTS -->
     <section>
         <h2>Research Interests</h2>
         <div class="two-column">
@@ -344,57 +341,66 @@
         </div>
     </section>
 
-    <!-- ==================== TEACHING EXPERIENCE ==================== -->
-    <section>
-        <h2>Teaching Experience</h2>
-        <p style="margin-bottom: 15px;"><strong>Courses Taught:</strong></p>
-        <div class="two-column">
-            <ul>
-                <li>Cybersecurity and Privacy</li>
-                <li>Computer Network and Information Security</li>
-                <li>Machine Learning</li>
-                <li>Human-Computer Interaction</li>
-                <li>Python Programming</li>
-            </ul>
-            <ul>
-                <li>Java Programming</li>
-                <li>C Programming</li>
-                <li>Operating Systems</li>
-                <li>Data Structures</li>
-                <li>Introduction to Linux</li>
-            </ul>
-        </div>
-        <p style="margin-top: 15px;"><strong>Additional Responsibilities:</strong></p>
-        <ul>
-            <li>IQAC Coordinator — Assam down town University (2023–2025)</li>
-            <li>Supervised 15+ undergraduate and postgraduate research projects</li>
-            <li>Organized guest lectures, conferences, workshops, and seminars</li>
-        </ul>
-    </section>
-
-    <!-- ==================== BOOKS ==================== -->
+    <!-- BOOKS WITH LINKS -->
     <section>
         <h2>Books</h2>
-        <div class="pub-item">Sonowal, G. (2026). <em>User Interface and User Experience: Foundational Principles for Interactive Design</em>. CRC Press, Boca Raton, Florida, USA. ISBN: 9781041144465.</div>
-        <div class="pub-item">Sonowal, G. (2025). <em>Design Thinking: Innovative Solutions for a Better World</em>. CRC Press, Boca Raton, Florida, USA. ISBN: 9781032824376.</div>
-        <div class="pub-item">Sonowal, G. (2023). <em>Social Engineering Attack: Rethinking Responsibilities and Solutions</em>. Nova Science Publishers, Inc., NY, USA. ISBN: 979-8-88697-739-4.</div>
-        <div class="pub-item">Sonowal, G. (2022). <em>Phishing and Communication Channels: A Guide to Identifying and Mitigating Phishing Attacks</em>. Springer (Apress), Berkeley, CA. ISBN: 978-1-4842-7744-7.</div>
+
+        <div class="pub-item">
+            Sonowal, G. (2026). <em>User Interface and User Experience: Foundational Principles for Interactive Design</em>. CRC Press. ISBN: 9781041144465.
+            <div class="pub-links">
+                <a href="https://www.routledge.com/User-Interface-and-User-Experience-Foundational-Principles-for-Interactive-Design/Sonowal/p/book/9781041144465" target="_blank">🔗 View Book</a>
+            </div>
+        </div>
+
+        <div class="pub-item">
+            Sonowal, G. (2025). <em>Design Thinking: Innovative Solutions for a Better World</em>. CRC Press. ISBN: 9781032824376.
+            <div class="pub-links">
+                <a href="https://doi.org/10.1201/9781003509950" target="_blank">🔗 DOI Link</a>
+            </div>
+        </div>
+
+        <div class="pub-item">
+            Sonowal, G. (2023). <em>Social Engineering Attack: Rethinking Responsibilities and Solutions</em>. Nova Science Publishers. ISBN: 979-8-88697-739-4.
+            <div class="pub-links">
+                <a href="https://doi.org/10.52305/KS0A7898" target="_blank">🔗 DOI Link</a>
+            </div>
+        </div>
+
+        <div class="pub-item">
+            Sonowal, G. (2022). <em>Phishing and Communication Channels: A Guide to Identifying and Mitigating Phishing Attacks</em>. Springer (Apress). ISBN: 978-1-4842-7744-7.
+            <div class="pub-links">
+                <a href="https://doi.org/10.1007/978-1-4842-7744-7" target="_blank">🔗 DOI Link</a>
+                <a href="https://link.springer.com/book/10.1007/978-1-4842-7744-7" target="_blank">📖 Springer</a>
+            </div>
+        </div>
     </section>
 
-    <!-- ==================== JOURNAL PUBLICATIONS ==================== -->
+    <!-- JOURNAL PUBLICATIONS WITH LINKS -->
     <section>
         <h2>Journal Publications</h2>
 
         <div class="pub-item">
             Sonowal, G., &amp; Kuppusamy, K. S. (2020). PhiDMA – A phishing detection model with multi-filter approach. <em>Journal of King Saud University – Computer and Information Sciences</em>, 32(1), 99–112. (Elsevier) <span class="badge q1">Q1</span> <span class="badge">SCI-E</span>
+            <div class="pub-links">
+                <a href="https://doi.org/10.1016/j.jksuci.2017.07.005" target="_blank">🔗 DOI</a>
+                <a href="https://www.sciencedirect.com/science/article/pii/S1319157817301210" target="_blank">📄 Full Text</a>
+            </div>
         </div>
 
         <div class="pub-item">
             Sonowal, G., &amp; Kuppusamy, K. S. (2018). SmiDCA: An Anti-Smishing Model with Machine Learning Approach. <em>The Computer Journal</em>, 61(8), 1143–1157. (Oxford University Press) <span class="badge q2">Q2</span> <span class="badge">SCI-E</span>
+            <div class="pub-links">
+                <a href="https://doi.org/10.1093/comjnl/bxy039" target="_blank">🔗 DOI</a>
+                <a href="https://academic.oup.com/comjnl/article-abstract/61/8/1143/4985552" target="_blank">📄 Full Text</a>
+            </div>
         </div>
 
         <div class="pub-item">
             Sonowal, G., &amp; Kuppusamy, K. S. (2018). MMSPhiD: A phoneme based phishing verification model for persons with visual impairments. <em>Information and Computer Security</em>, 26(5), 613–636. (Emerald) <span class="badge q2">Q2</span> <span class="badge">ESCI</span>
+            <div class="pub-links">
+                <a href="https://doi.org/10.1108/ICS-12-2017-0091" target="_blank">🔗 DOI</a>
+                <a href="https://www.emerald.com/ics/article-abstract/26/5/613/109191/MMSPhiD-a-phoneme-based-phishing-verification" target="_blank">📄 Full Text</a>
+            </div>
         </div>
 
         <div class="pub-item">
@@ -403,10 +409,18 @@
 
         <div class="pub-item">
             Sonowal, G. (2020). Phishing Email Detection Based on Binary Search Feature Selection. <em>SN Computer Science</em>, 1(4), 191. (Springer) <span class="badge">Scopus</span>
+            <div class="pub-links">
+                <a href="https://doi.org/10.1007/s42979-020-00194-z" target="_blank">🔗 DOI</a>
+                <a href="https://link.springer.com/article/10.1007/s42979-020-00194-z" target="_blank">📄 Full Text</a>
+            </div>
         </div>
 
         <div class="pub-item">
             Sonowal, G. (2020). Detecting phishing SMS based on multiple Correlation Algorithms. <em>SN Computer Science</em>, 1(6), 361. (Springer) <span class="badge">Scopus</span>
+            <div class="pub-links">
+                <a href="https://doi.org/10.1007/s42979-020-00377-8" target="_blank">🔗 DOI</a>
+                <a href="https://link.springer.com/article/10.1007/s42979-020-00377-8" target="_blank">📄 Full Text</a>
+            </div>
         </div>
 
         <div class="pub-item">
@@ -415,10 +429,16 @@
 
         <div class="pub-item">
             Sonowal, G., Balaji, V., &amp; Kumar, N. (2025). Model for detecting fake news using a machine learning algorithm. <em>CSI Transactions on ICT</em>, 13(2), 265–276. (Springer) <span class="badge">Scopus</span>
+            <div class="pub-links">
+                <a href="https://doi.org/10.1007/s40012-025-00421-z" target="_blank">🔗 DOI</a>
+            </div>
         </div>
 
         <div class="pub-item">
             Balaji, V., Sonowal, G., Ramachandran, V., &amp; Rangasamy, R. (2026). Accessible Multilingual Audio based Image Alternative (ALT) description for persons with visual impairment. <em>Universal Access in the Information Society</em>, 25(1), 17. (Springer) <span class="badge">Scopus</span>
+            <div class="pub-links">
+                <a href="https://doi.org/10.1007/s10209-025-01294-4" target="_blank">🔗 DOI</a>
+            </div>
         </div>
 
         <div class="pub-item">
@@ -427,10 +447,17 @@
 
         <div class="pub-item">
             Verma, V., Sorathiya, V., Sonowal, G., &amp; Reddy, M. S. (2024). Hybrid Optimization for Integration of Renewable Energy Systems into Smart Grids. <em>Measurement: Sensors</em>, Vol. 33. (Elsevier) <span class="badge">Scopus</span>
+            <div class="pub-links">
+                <a href="https://doi.org/10.1016/j.measen.2024.101170" target="_blank">🔗 DOI</a>
+                <a href="https://www.sciencedirect.com/science/article/pii/S2665917424001466" target="_blank">📄 Full Text</a>
+            </div>
         </div>
 
         <div class="pub-item">
             Raju, S. H., Sesadri, U., Krishna, S. T., Sreeraman, Y., Balaji, V., &amp; Sonowal, G. (2024). A hybrid optimal approach for efficient remote monitoring and avoidance of train collisions. <em>International Journal of Safety and Security Engineering</em>, 14(5), 1569–1575.
+            <div class="pub-links">
+                <a href="https://doi.org/10.18280/ijsse.140524" target="_blank">🔗 DOI</a>
+            </div>
         </div>
 
         <div class="pub-item">
@@ -439,33 +466,66 @@
 
         <div class="pub-item">
             Sonowal, G., Singh, S. G., Bairagi, P., Barman, U., Das, D., Iltimas, M., &amp; Gurbanova, G. (2025). Comprehensive Evaluation And Performance Analysis of a Deep Learning Model with Hyperparameter Tuning for Lumpy Skin Disease Classification in Dairy Cows. <em>Reliability: Theory &amp; Applications</em>, 20(SI 7 (83)), 58–65.
+            <div class="pub-links">
+                <a href="https://doi.org/10.24412/1932-2321-2025-783-58-65" target="_blank">🔗 DOI</a>
+            </div>
         </div>
     </section>
 
-    <!-- ==================== CONFERENCE PUBLICATIONS ==================== -->
+    <!-- CONFERENCE PUBLICATIONS WITH LINKS -->
     <section>
         <h2>Conference Publications</h2>
-        <div class="pub-item">Sonowal, G. (2020). A Model for Detecting Sounds-alike Phishing Email Contents for Persons with Visual Impairments. <em>2020 Sixth International Conference on e-Learning (econf)</em>, Sakheer, Bahrain, pp. 17–21. IEEE.</div>
-        <div class="pub-item">Sonowal, G., Kuppusamy, K. S., &amp; Kumar, A. (2017). Usability evaluation of active anti-phishing browser extensions for persons with visual impairments. <em>2017 4th International Conference on Advanced Computing and Communication Systems (ICACCS)</em>, Coimbatore, India, pp. 1–6. IEEE.</div>
-        <div class="pub-item">Sonowal, G., &amp; Kuppusamy, K. S. (2016). MASPHID: A Model to Assist Screen Reader Users for Detecting Phishing Sites Using Aural and Visual Similarity Measures. <em>Proceedings of the International Conference on Informatics and Analytics (ICIA-16)</em>, Puducherry, India, Article 87. ACM.</div>
-        <div class="pub-item">Choudhury, M., Deka, A., Sonowal, G., &amp; Singh, S. G. (2026). Suicide Prediction Using Machine Learning on Assamese Language. <em>2026 IEEE International Conference on IATMSI</em>, ABV-IIITM Gwalior, India. IEEE.</div>
+
+        <div class="pub-item">
+            Sonowal, G. (2020). A Model for Detecting Sounds-alike Phishing Email Contents for Persons with Visual Impairments. <em>2020 Sixth International Conference on e-Learning (econf)</em>, Sakheer, Bahrain, pp. 17–21. IEEE.
+            <div class="pub-links">
+                <a href="https://doi.org/10.1109/econf51404.2020.9385451" target="_blank">🔗 DOI</a>
+                <a href="https://ieeexplore.ieee.org/document/9385451/" target="_blank">📄 IEEE Xplore</a>
+            </div>
+        </div>
+
+        <div class="pub-item">
+            Sonowal, G., Kuppusamy, K. S., &amp; Kumar, A. (2017). Usability evaluation of active anti-phishing browser extensions for persons with visual impairments. <em>2017 4th International Conference on Advanced Computing and Communication Systems (ICACCS)</em>, Coimbatore, India, pp. 1–6. IEEE.
+            <div class="pub-links">
+                <a href="https://doi.org/10.1109/ICACCS.2017.8014654" target="_blank">🔗 DOI</a>
+            </div>
+        </div>
+
+        <div class="pub-item">
+            Sonowal, G., &amp; Kuppusamy, K. S. (2016). MASPHID: A Model to Assist Screen Reader Users for Detecting Phishing Sites Using Aural and Visual Similarity Measures. <em>Proceedings of the International Conference on Informatics and Analytics (ICIA-16)</em>, Puducherry, India, Article 87. ACM.
+            <div class="pub-links">
+                <a href="https://doi.org/10.1145/2980258.2980443" target="_blank">🔗 DOI</a>
+            </div>
+        </div>
+
+        <div class="pub-item">
+            Choudhury, M., Deka, A., Sonowal, G., &amp; Singh, S. G. (2026). Suicide Prediction Using Machine Learning on Assamese Language. <em>2026 IEEE International Conference on IATMSI</em>, ABV-IIITM Gwalior, India. IEEE.
+        </div>
     </section>
 
-    <!-- ==================== BOOK CHAPTER ==================== -->
+    <!-- BOOK CHAPTER WITH LINK -->
     <section>
         <h2>Book Chapter</h2>
-        <div class="pub-item">Balaji, V., Sonowal, G., &amp; Gowda, S. (2023). Recent Research Techniques in Processing, Security, and Storage of Real-World Applications of Big Computing. In <em>Big Data Computing: Advances in Technologies, Methodologies, and Applications</em>. CRC Press. ISBN: 9781032634050.</div>
+        <div class="pub-item">
+            Balaji, V., Sonowal, G., &amp; Gowda, S. (2023). Recent Research Techniques in Processing, Security, and Storage of Real-World Applications of Big Computing. In <em>Big Data Computing: Advances in Technologies, Methodologies, and Applications</em>. CRC Press. ISBN: 9781032634050.
+            <div class="pub-links">
+                <a href="http://dx.doi.org/10.1201/9781032634050-8" target="_blank">🔗 DOI</a>
+            </div>
+        </div>
     </section>
 
-    <!-- ==================== PATENT ==================== -->
+    <!-- PATENT -->
     <section>
         <h2>Patent</h2>
         <div class="pub-item">
-            Optimal Hybrid Approach for Avoiding Trains Collisions. India Patent Office, Application No. 202441027579 A. Published 12 April 2024. The Patent Office Journal No. 15/2024. <span class="badge patent">National</span>
+            Optimal Hybrid Approach for Avoiding Trains Collisions. India Patent Office, Application No. 202441027579 A. Published 12 April 2024. <span class="badge patent">National</span>
+            <div class="pub-links">
+                <a href="https://search.ipindia.gov.in/IP0Journal/Journal/ViewJournal" target="_blank">🔗 Patent Office Journal</a>
+            </div>
         </div>
     </section>
 
-    <!-- ==================== AWARDS & ACHIEVEMENTS ==================== -->
+    <!-- AWARDS -->
     <section>
         <h2>Awards &amp; Achievements</h2>
         <ul>
@@ -475,19 +535,19 @@
         </ul>
     </section>
 
-    <!-- ==================== CERTIFICATIONS ==================== -->
+    <!-- CERTIFICATIONS -->
     <section>
         <h2>Certifications</h2>
         <ul>
             <li><strong>Cyber Security and Privacy</strong> — NPTEL-AICTE (2023)</li>
-            <li><strong>Identity &amp; Access Management</strong> — IBM Career Education Program (2023)</li>
+            <li><strong>Identity &amp; Access Management</strong> — IBM (2023)</li>
             <li><strong>IBM Cognos Analytics V11.1.x Reporting Essentials</strong> — IBM (2023)</li>
-            <li><strong>Introduction to C# Programming and Unity</strong> — Coursera, University of Colorado (2021)</li>
+            <li><strong>Introduction to C# Programming and Unity</strong> — Coursera (2021)</li>
             <li><strong>IoT Foundation</strong> — Jigsaw Academy (2021)</li>
         </ul>
     </section>
 
-    <!-- ==================== PROFESSIONAL MEMBERSHIPS ==================== -->
+    <!-- MEMBERSHIPS -->
     <section>
         <h2>Professional Memberships</h2>
         <ul>
@@ -496,7 +556,7 @@
         </ul>
     </section>
 
-    <!-- ==================== CONSULTANCY ==================== -->
+    <!-- CONSULTANCY -->
     <section>
         <h2>Consultancy</h2>
         <div class="pub-item">
@@ -505,7 +565,7 @@
         </div>
     </section>
 
-    <!-- ==================== PROFILES ==================== -->
+    <!-- PROFILES -->
     <section>
         <h2>Academic Profiles</h2>
         <div class="links">
@@ -517,7 +577,6 @@
         </div>
     </section>
 
-    <!-- ==================== FOOTER ==================== -->
     <footer>
         &copy; 2026 Dr. Gunikhan Sonowal. All rights reserved.
     </footer>
