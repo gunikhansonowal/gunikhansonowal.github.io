@@ -4,288 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Gunikhan Sonowal - Cybersecurity Researcher</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f6f8;
-        }
-
-        .container {
-            max-width: 950px;
-            margin: 0 auto;
-            padding: 40px 25px;
-            background-color: #fff;
-            box-shadow: 0 0 25px rgba(0,0,0,0.08);
-        }
-
-        .header-flex {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 30px;
-            text-align: left;
-        }
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #1a5276;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            flex-shrink: 0;
-        }
-
-        header h1 {
-            font-size: 2.3em;
-            color: #1a5276;
-            margin-bottom: 8px;
-            letter-spacing: 0.5px;
-        }
-
-        header .subtitle {
-            font-size: 1.15em;
-            color: #555;
-            margin-bottom: 18px;
-            font-weight: 500;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 18px;
-            font-size: 0.95em;
-        }
-
-        .contact-info a {
-            color: #1a5276;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        section {
-            margin-bottom: 38px;
-        }
-
-        section h2 {
-            font-size: 1.45em;
-            color: #1a5276;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        section h2::before {
-            content: "";
-            display: inline-block;
-            width: 6px;
-            height: 22px;
-            background-color: #1a5276;
-            border-radius: 3px;
-        }
-
-        .bio {
-            text-align: justify;
-        }
-
-        .bio p {
-            margin-bottom: 14px;
-        }
-
-        .education-item {
-            margin-bottom: 16px;
-            padding-left: 15px;
-            border-left: 3px solid #d4e6f1;
-        }
-
-        .pub-item {
-            margin-bottom: 16px;
-            padding: 12px 15px;
-            background-color: #f8f9fa;
-            border-left: 4px solid #1a5276;
-            border-radius: 4px;
-            font-size: 0.95em;
-            text-align: justify;
-        }
-
-        .pub-item a {
-            color: #1a5276;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .pub-item a:hover {
-            text-decoration: underline;
-            color: #0e3a56;
-        }
-
-        .pub-links {
-            margin-top: 8px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .pub-links a {
-            display: inline-block;
-            padding: 4px 12px;
-            background-color: #eaf2f8;
-            color: #1a5276;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 0.82em;
-            font-weight: 600;
-            transition: background-color 0.3s;
-        }
-
-        .pub-links a:hover {
-            background-color: #1a5276;
-            color: #fff;
-        }
-
-        ul {
-            list-style-type: disc;
-            padding-left: 25px;
-        }
-
-        ul li {
-            margin-bottom: 9px;
-        }
-
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-        }
-
-        .links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 15px;
-        }
-
-        .links a {
-            display: inline-block;
-            padding: 9px 18px;
-            background-color: #1a5276;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 0.9em;
-            transition: background-color 0.3s, transform 0.2s;
-        }
-
-        .links a:hover {
-            background-color: #0e3a56;
-            transform: translateY(-2px);
-        }
-
-        .badge {
-            display: inline-block;
-            background-color: #eaf2f8;
-            color: #1a5276;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 0.78em;
-            font-weight: 600;
-            margin-left: 5px;
-        }
-
-        .badge.q1 {
-            background-color: #d4efdf;
-            color: #1e8449;
-        }
-
-        .badge.q2 {
-            background-color: #fcf3cf;
-            color: #9a7d0a;
-        }
-
-        .badge.patent {
-            background-color: #fadbd8;
-            color: #922b21;
-        }
-
-        footer {
-            text-align: center;
-            font-size: 0.85em;
-            color: #888;
-            border-top: 1px solid #e0e0e0;
-            padding-top: 22px;
-            margin-top: 35px;
-        }
-
-        .stat-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .stat-card {
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            padding: 18px 10px;
-            text-align: center;
-            border: 1px solid #e9ecef;
-        }
-
-        .stat-card .number {
-            font-size: 1.8em;
-            font-weight: 700;
-            color: #1a5276;
-            display: block;
-        }
-
-        .stat-card .label {
-            font-size: 0.85em;
-            color: #666;
-            margin-top: 5px;
-            display: block;
-        }
-
-        @media (max-width: 700px) {
-            header h1 { font-size: 1.7em; }
-            .container { padding: 25px 18px; }
-            .contact-info { flex-direction: column; gap: 8px; }
-            .two-column { grid-template-columns: 1fr; }
-            .stat-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
 
-    <!-- HEADER -->
-    <header>
+    <!-- ===== TOP NAVIGATION ===== -->
+    <nav class="topnav">
+        <a href="#home">Home</a>
+        <a href="#journals">Journal</a>
+        <a href="#books">Book</a>
+        <a href="#conferences">Conference</a>
+        <a href="#talks">Invited Talks</a>
+        <a href="#others">Others</a>
+    </nav>
+
+    <!-- ===== HEADER ===== -->
+    <header id="home">
         <div class="header-flex">
-    <img src="profile.png" alt="Dr. Gunikhan Sonowal" class="profile-pic">
-    <div class="header-text">
-        <h1>Dr. Gunikhan Sonowal</h1>
-        <p class="subtitle">Cybersecurity Researcher | Digital Forensics | Author | Educator</p>
-    </div>
-</div>
+            <img src="profile.png" alt="Dr. Gunikhan Sonowal" class="profile-pic">
+            <div class="header-text">
+                <h1>Dr. Gunikhan Sonowal</h1>
+                <p class="subtitle">Cybersecurity Researcher | Digital Forensics | Author | Educator</p>
+            </div>
+        </div>
+        <div class="contact-info">
+            <span>📧 <a href="mailto:gunikhan.sonowal@gmail.com">gunikhan.sonowal@gmail.com</a></span>
+            <span>🔗 <a href="https://orcid.org/0000-0001-5626-2411" target="_blank">ORCID</a></span>
+            <span>📊 <a href="https://www.scopus.com/authid/detail.uri?authorId=57192092901" target="_blank">Scopus</a></span>
+        </div>
     </header>
 
-    <!-- ABOUT -->
-    <section>
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
         <h2>About</h2>
         <div class="bio">
             <p>
@@ -304,8 +56,8 @@
         </div>
     </section>
 
-    <!-- EDUCATION -->
-    <section>
+    <!-- ===== EDUCATION ===== -->
+    <section id="education">
         <h2>Education</h2>
         <div class="education-item">
             <strong>Ph.D. in Computer Science &amp; Engineering</strong><br>
@@ -314,7 +66,7 @@
         </div>
         <div class="education-item">
             <strong>Master of Computer Applications (MCA)</strong><br>
-            University of Hyderabad, India (2011–2014) 
+            University of Hyderabad, India (2011–2014)
         </div>
         <div class="education-item">
             <strong>Bachelor of Science (B.Sc.)</strong><br>
@@ -322,8 +74,8 @@
         </div>
     </section>
 
-    <!-- ACADEMIC POSITIONS -->
-    <section>
+    <!-- ===== ACADEMIC POSITIONS ===== -->
+    <section id="positions">
         <h2>Academic Positions</h2>
         <ul>
             <li><strong>Postdoctoral Fellow</strong> — National Forensic Sciences University, Gandhinagar (2025–Present)<br><em>ISEA Phase-III, MeitY, Government of India</em></li>
@@ -333,8 +85,8 @@
         </ul>
     </section>
 
-    <!-- RESEARCH INTERESTS -->
-    <section>
+    <!-- ===== RESEARCH INTERESTS ===== -->
+    <section id="research">
         <h2>Research Interests</h2>
         <div class="two-column">
             <ul>
@@ -348,8 +100,8 @@
         </div>
     </section>
 
-    <!-- BOOKS WITH LINKS -->
-    <section>
+    <!-- ===== BOOKS ===== -->
+    <section id="books">
         <h2>Books</h2>
 
         <div class="pub-item">
@@ -382,8 +134,8 @@
         </div>
     </section>
 
-    <!-- JOURNAL PUBLICATIONS WITH LINKS -->
-    <section>
+    <!-- ===== JOURNAL PUBLICATIONS ===== -->
+    <section id="journals">
         <h2>Journal Publications</h2>
 
         <div class="pub-item">
@@ -401,7 +153,7 @@
         </div>
 
         <div class="pub-item">
-            Sonowal, G., &amp; Kuppusamy, K. S. (2018). MMSPhiD: A phoneme based phishing verification model for persons with visual impairments. <em>Information and Computer Security</em>, 26(5), 613–636. (Emerald) 
+            Sonowal, G., &amp; Kuppusamy, K. S. (2018). MMSPhiD: A phoneme based phishing verification model for persons with visual impairments. <em>Information and Computer Security</em>, 26(5), 613–636. (Emerald)
             <div class="pub-links">
                 <a href="https://doi.org/10.1108/ICS-12-2017-0091" target="_blank">🔗 Link</a>
             </div>
@@ -412,15 +164,12 @@
             <div class="pub-links">
                 <a href="https://doi.org/10.1111/1556-4029.70480" target="_blank">🔗 Link</a>
             </div>
-
-            
         </div>
 
         <div class="pub-item">
-            Sonowal, G. (2020). Phishing Email Detection Based on Binary Search Feature Selection. <em>SN Computer Science</em>, 1(4), 191. (Springer) 
+            Sonowal, G. (2020). Phishing Email Detection Based on Binary Search Feature Selection. <em>SN Computer Science</em>, 1(4), 191. (Springer)
             <div class="pub-links">
                 <a href="https://doi.org/10.1007/s42979-020-00194-z" target="_blank">🔗 Link</a>
-                
             </div>
         </div>
 
@@ -436,14 +185,14 @@
         </div>
 
         <div class="pub-item">
-            Sonowal, G., Balaji, V., &amp; Kumar, N. (2025). Model for detecting fake news using a machine learning algorithm. <em>CSI Transactions on ICT</em>, 13(2), 265–276. (Springer) 
+            Sonowal, G., Balaji, V., &amp; Kumar, N. (2025). Model for detecting fake news using a machine learning algorithm. <em>CSI Transactions on ICT</em>, 13(2), 265–276. (Springer)
             <div class="pub-links">
                 <a href="https://doi.org/10.1007/s40012-025-00421-z" target="_blank">🔗 Link</a>
             </div>
         </div>
 
         <div class="pub-item">
-            Balaji, V., Sonowal, G., Ramachandran, V., &amp; Rangasamy, R. (2026). Accessible Multilingual Audio based Image Alternative (ALT) description for persons with visual impairment. <em>Universal Access in the Information Society</em>, 25(1), 17. (Springer) 
+            Balaji, V., Sonowal, G., Ramachandran, V., &amp; Rangasamy, R. (2026). Accessible Multilingual Audio based Image Alternative (ALT) description for persons with visual impairment. <em>Universal Access in the Information Society</em>, 25(1), 17. (Springer)
             <div class="pub-links">
                 <a href="https://doi.org/10.1007/s10209-025-01294-4" target="_blank">🔗 Link</a>
             </div>
@@ -454,7 +203,7 @@
         </div>
 
         <div class="pub-item">
-            Verma, V., Sorathiya, V., Sonowal, G., &amp; Reddy, M. S. (2024). Hybrid Optimization for Integration of Renewable Energy Systems into Smart Grids. <em>Measurement: Sensors</em>, Vol. 33. (Elsevier) 
+            Verma, V., Sorathiya, V., Sonowal, G., &amp; Reddy, M. S. (2024). Hybrid Optimization for Integration of Renewable Energy Systems into Smart Grids. <em>Measurement: Sensors</em>, Vol. 33. (Elsevier)
             <div class="pub-links">
                 <a href="https://doi.org/10.1016/j.measen.2024.101170" target="_blank">🔗 Link</a>
             </div>
@@ -479,8 +228,8 @@
         </div>
     </section>
 
-    <!-- CONFERENCE PUBLICATIONS WITH LINKS -->
-    <section>
+    <!-- ===== CONFERENCE PUBLICATIONS ===== -->
+    <section id="conferences">
         <h2>Conference Publications</h2>
 
         <div class="pub-item">
@@ -509,41 +258,66 @@
         </div>
     </section>
 
-    <!-- BOOK CHAPTER WITH LINK -->
-    <section>
-        <h2>Book Chapter</h2>
+    <!-- ===== INVITED TALKS ===== -->
+    <section id="talks">
+        <h2>Invited Talks</h2>
+
+        <div class="talk-item">
+            <div class="talk-title">
+                Phishing Detection Using Machine Learning
+                <span class="talk-type international">International</span>
+            </div>
+            <div class="talk-venue">IEEE International Conference on Cyber Security, Singapore</div>
+            <div class="talk-date">March 2024</div>
+        </div>
+
+        <div class="talk-item">
+            <div class="talk-title">
+                Digital Forensics in the Age of AI
+                <span class="talk-type national">National</span>
+            </div>
+            <div class="talk-venue">National Forensic Sciences University, Gandhinagar</div>
+            <div class="talk-date">November 2024</div>
+        </div>
+
+        <div class="talk-item">
+            <div class="talk-title">
+                Accessible Security for Persons with Visual Impairments
+                <span class="talk-type national">National</span>
+            </div>
+            <div class="talk-venue">Assam down town University, Guwahati</div>
+            <div class="talk-date">August 2023</div>
+        </div>
+    </section>
+
+    <!-- ===== OTHERS ===== -->
+    <section id="others">
+        <h2>Others</h2>
+
+        <h3 style="color:#1a5276; margin: 18px 0 10px;">Book Chapter</h3>
         <div class="pub-item">
             Balaji, V., Sonowal, G., &amp; Gowda, S. (2023). Recent Research Techniques in Processing, Security, and Storage of Real-World Applications of Big Computing. In <em>Big Data Computing: Advances in Technologies, Methodologies, and Applications</em>. CRC Press. ISBN: 9781032634050.
             <div class="pub-links">
                 <a href="http://dx.doi.org/10.1201/9781032634050-8" target="_blank">🔗 Link</a>
             </div>
         </div>
-    </section>
 
-    <!-- PATENT -->
-    <section>
-        <h2>Patent</h2>
+        <h3 style="color:#1a5276; margin: 18px 0 10px;">Patent</h3>
         <div class="pub-item">
             Optimal Hybrid Approach for Avoiding Trains Collisions. India Patent Office, Application No. 202441027579 A. Published 12 April 2024. <span class="badge patent">National</span>
             <div class="pub-links">
                 <a href="https://search.ipindia.gov.in/IP0Journal/Journal/ViewJournal" target="_blank">🔗 Patent Office Journal</a>
             </div>
         </div>
-    </section>
 
-    <!-- AWARDS -->
-    <section>
-        <h2>Awards &amp; Achievements</h2>
+        <h3 style="color:#1a5276; margin: 18px 0 10px;">Awards &amp; Achievements</h3>
         <ul>
             <li><strong>UGC NET</strong> — Computer Science and Applications (2018)</li>
             <li><strong>GATE</strong> — Computer Science and Information Technology (2016)</li>
             <li><strong>ISEA Phase-III Postdoctoral Fellowship</strong> — MeitY, Government of India (2025–Present)</li>
         </ul>
-    </section>
 
-    <!-- CERTIFICATIONS -->
-    <section>
-        <h2>Certifications</h2>
+        <h3 style="color:#1a5276; margin: 18px 0 10px;">Certifications</h3>
         <ul>
             <li><strong>Cyber Security and Privacy</strong> — NPTEL-AICTE (2023)</li>
             <li><strong>Identity &amp; Access Management</strong> — IBM (2023)</li>
@@ -551,29 +325,20 @@
             <li><strong>Introduction to C# Programming and Unity</strong> — Coursera (2021)</li>
             <li><strong>IoT Foundation</strong> — Jigsaw Academy (2021)</li>
         </ul>
-    </section>
 
-    <!-- MEMBERSHIPS -->
-    <section>
-        <h2>Professional Memberships</h2>
+        <h3 style="color:#1a5276; margin: 18px 0 10px;">Professional Memberships</h3>
         <ul>
             <li><strong>International Association of Engineers (IAENG)</strong> — Member (2021)</li>
             <li><strong>Society of Digital Information and Wireless Communications (SDIWC)</strong> — Member (2021)</li>
         </ul>
-    </section>
 
-    <!-- CONSULTANCY -->
-    <section>
-        <h2>Consultancy</h2>
+        <h3 style="color:#1a5276; margin: 18px 0 10px;">Consultancy</h3>
         <div class="pub-item">
             <strong>Phishing Detection Using Feature Selection Algorithms and Multiple Classifiers</strong><br>
             Sak Infrmatics, Hyderabad, India (2022)
         </div>
-    </section>
 
-    <!-- PROFILES -->
-    <section>
-        <h2>Academic Profiles</h2>
+        <h3 style="color:#1a5276; margin: 18px 0 10px;">Academic Profiles</h3>
         <div class="links">
             <a href="https://orcid.org/0000-0001-5626-2411" target="_blank">ORCID</a>
             <a href="https://www.scopus.com/authid/detail.uri?authorId=57192092901" target="_blank">Scopus</a>
